@@ -1,4 +1,4 @@
-package com.wyx.topindicatorbar;
+package com.wyx.demo;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.Toast;
+
+import com.wyx.topindicatorbar.R;
+import com.wyx.topoindicator.TopIndicatorBar;
 
 import java.util.ArrayList;
 

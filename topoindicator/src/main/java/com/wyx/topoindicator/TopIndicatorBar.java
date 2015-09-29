@@ -1,4 +1,4 @@
-package com.wyx.topindicatorbar;
+package com.wyx.topoindicator;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -27,14 +27,28 @@ public class TopIndicatorBar extends LinearLayout {
     private int paddingBottom = 20;
     private int paddingLeft = 25;
     private int paddingRight = 25;
-    private float textSize = 15;
+
     private int currentIndex;
 
-    int textStyle;
-    int textColor;
-    int turnColor;
+    private float textSize = 15;
+    private int textStyle;
+    private int textColor;
+    private int turnColor;
+
+    private Bitmap blackBitmap = null;
+    private Paint srcInPaint = null;
+    private int shaderWidth;
+    private int shaderHeight;
+    private int shaderLeft;
+
+    private boolean initStatus = false;
+    private int initIndex = 0;
     private TopIndicatorTabChangeListener tabChangeListenerlistener = null;
     private ViewPager viewPager;
+
+    private final Paint paint;
+    private final Path middleLine;
+    private float offsetX = 0;
 
     public TopIndicatorBar(Context context) {
         this(context, null);
@@ -244,9 +258,7 @@ public class TopIndicatorBar extends LinearLayout {
         return (int) (this.titlesText[index + 1].getLeft() + width);
     }
 
-    private final Paint paint;
-    private final Path middleLine;
-    private float offsetX = 0;
+
 
     private void makePath() {
         int start = this.titlesText[currentIndex].getLeft();
@@ -277,14 +289,6 @@ public class TopIndicatorBar extends LinearLayout {
         return red;
     }
 
-    Bitmap blackBitmap = null;
-    Paint srcInPaint = null;
-    private int shaderWidth;
-    private int shaderHeight;
-    private int shaderLeft;
-
-    private boolean initStatus = false;
-    private int initIndex = 0;
 
     public void setInitColorIndex(int initColorIndex) {
         this.initIndex = initColorIndex;
@@ -303,6 +307,7 @@ public class TopIndicatorBar extends LinearLayout {
         }
         if (shaderLeft == 0 && titlesText != null && initStatus) {
             currentIndex = initIndex;
+            this.initIndex = 0;
             initStatus = true;
             updateCurrentColor(currentIndex, 0);
             if (viewPager != null) {

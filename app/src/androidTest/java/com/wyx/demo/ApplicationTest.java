@@ -1,4 +1,4 @@
-package com.wyx.topindicatorbar;
+package com.wyx.demo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

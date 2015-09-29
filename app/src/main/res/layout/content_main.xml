@@ -21,13 +21,13 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <com.wyx.topindicatorbar.TopIndicatorBar
+        <com.wyx.topoindicator.TopIndicatorBar
             android:id="@+id/topindicatorBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             TopIndicatorBar:textSize="5sp"
             TopIndicatorBar:textStyle="bold"
-            TopIndicatorBar:turnColor="@color/colorPrimaryDark"></com.wyx.topindicatorbar.TopIndicatorBar>
+            TopIndicatorBar:turnColor="@color/colorPrimaryDark"></com.wyx.topoindicator.TopIndicatorBar>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
@@ -47,13 +47,13 @@
             android:scrollbars="none"
             android:layout_height="wrap_content">
 
-            <com.wyx.topindicatorbar.TopIndicatorBar
+            <com.wyx.topoindicator.TopIndicatorBar
                 android:id="@+id/topindicatorBar2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 TopIndicatorBar:textSize="7sp"
                 TopIndicatorBar:textStyle="bold"
-                TopIndicatorBar:turnColor="@color/colorPrimaryDark"></com.wyx.topindicatorbar.TopIndicatorBar>
+                TopIndicatorBar:turnColor="@color/colorPrimaryDark"></com.wyx.topoindicator.TopIndicatorBar>
         </HorizontalScrollView>
 
 
@@ -69,13 +69,13 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <com.wyx.topindicatorbar.TopIndicatorBar
+        <com.wyx.topoindicator.TopIndicatorBar
             android:id="@+id/topindicatorBar3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             TopIndicatorBar:textSize="5sp"
             TopIndicatorBar:textStyle="bold"
-            TopIndicatorBar:turnColor="@color/colorPrimaryDark"></com.wyx.topindicatorbar.TopIndicatorBar>
+            TopIndicatorBar:turnColor="@color/colorPrimaryDark"></com.wyx.topoindicator.TopIndicatorBar>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager3"
